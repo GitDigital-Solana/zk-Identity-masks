@@ -1,0 +1,26 @@
+name: Tokenizer Dry Run
+on:
+  workflow_dispatch:
+    inputs:
+      asset_name:
+        description: 'Asset name for dry run'
+        required: true
+        default: 'Test Asset'
+
+jobs:
+  dry-run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - run: npm run build
+      - name: Validate sample metadata
+        run: |
+          npx ts-node -e "
+            const { validateMetadata } = require('./dist/rwa/metadata-validator');
+            const sample = require('./templates/token-metadata.json');
+            console.log(validateMetadata(sample));
+          "
