@@ -1,0 +1,14 @@
+name: Solana RWA Tokenizer
+description: Tokenize real-world assets on Solana from GitHub pull requests
+url: https://github.com/your-org/solana-rwa-tokenizer
+hook_attributes:
+  url: https://your-deployment.example.com/webhooks/github
+  active: true
+default_permissions:
+  contents: write
+  pull_requests: write
+  metadata: read
+default_events:
+  - pull_request
+  - push
+public: false
