@@ -1,0 +1,17 @@
+{
+  "name": "Example Real Estate Token",
+  "symbol": "ERE1",
+  "uri": "https://example.com/metadata/ere1.json",
+  "decimals": 6,
+  "assetClass": "real-estate",
+  "jurisdiction": "US",
+  "attributes": {
+    "propertyAddress": "123 Main St",
+    "valuationUSD": 1500000,
+    "spv": "ERE SPV LLC"
+  },
+  "compliance": {
+    "kycRequired": true,
+    "accreditedOnly": true
+  }
+}
