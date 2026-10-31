@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Identity Attestation",
+  "type": "object",
+  "required": ["subject", "kycStatus", "jurisdiction"],
+  "properties": {
+    "subject": { "type": "string", "description": "Wallet address or DID" },
+    "kycStatus": { "type": "string", "enum": ["pending", "approved", "rejected"] },
+    "jurisdiction": { "type": "string" },
+    "accredited": { "type": "boolean" },
+    "expiresAt": { "type": "string", "format": "date-time" }
+  }
+}
