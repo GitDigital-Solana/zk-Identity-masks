@@ -1,0 +1,13 @@
+{
+  "mint": "REPLACE_WITH_MINT_ADDRESS",
+  "name": "Example Real Estate Token",
+  "symbol": "ERE1",
+  "decimals": 6,
+  "assetClass": "real-estate",
+  "jurisdiction": "US",
+  "compliance": {
+    "kycRequired": true,
+    "accreditedOnly": true
+  },
+  "timestamp": "2026-10-31T00:00:00.000Z"
+}
